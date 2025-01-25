@@ -13,8 +13,7 @@ import { fileURLToPath } from "url";
 import "@quenti/env/client/client.mjs";
 import "@quenti/env/server/server.mjs";
 
-import pjson from "./package.json"
-
+const pjson = require('./package.json')
 const shouldAnalyzeBundles = process.env.ANALYZE === "true";
 const withBundleAnalyzer = (await import("@next/bundle-analyzer")).default({
   enabled: shouldAnalyzeBundles,
